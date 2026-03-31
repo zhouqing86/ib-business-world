@@ -25,6 +25,7 @@ Phase 13 → 资产管理与基金 (Asset Management & Funds)
 Phase 14 → 高级交易与金融科技 (Advanced Trading & FinTech)
 Phase 15 → 投行核心业务流程详解 (IB Core Business Process Flows)
 Phase 16 → UBS投资银行业务深度解析 (UBS Investment Bank Deep Dive)
+Phase 17 → UBS Neo平台深度解析 (UBS Neo Platform Deep Dive)
 ```
 
 ---
@@ -870,6 +871,57 @@ Phase 16 → UBS投资银行业务深度解析 (UBS Investment Bank Deep Dive)
 
 ---
 
+## Phase 17 — UBS Neo平台深度解析
+## Phase 17 — UBS Neo: Platform Deep Dive
+
+**文件：** `Phase-17-UBS-Neo-Platform.md`
+
+### 17.1 UBS Neo概述 / Overview
+- 定位：机构级一体化数字化交易与服务平台
+- 覆盖资产类别：FX / 固定收益 / 权益 / 结构化产品
+- 与Bloomberg的竞争定位
+
+### 17.2 平台架构 / Platform Architecture
+- 五大模块：Neo Markets / Neo Research / Neo Invest / Neo Structured Products / Neo Connect
+- 技术架构层次：展示层 / API网关 / 定价引擎 / OMS / 风险引擎 / 数据层
+
+### 17.3 Neo FX — 外汇交易模块
+- Spot / Forward / FX Swap / NDF / FX Options / Algo FX
+- 现货交易流程（含Last Look机制）
+- 算法执行流程（TWAP/VWAP/IS）与TCA报告
+
+### 17.4 Neo Fixed Income — 固定收益交易模块
+- 债券RFQ询价流程 / IRS & Repo电子执行
+- 一级市场新发债监控（New Issue Monitor）
+
+### 17.5 Neo Structured Products — 结构化产品模块
+- 产品定价器（Autocallable / ELN / PPN / KODA）
+- Autocallable完整生命周期（Inception → 赎回事件 → 敲入 → 到期）
+- 结构化产品分销工作流程（RM → 合规 → 执行 → 生命周期通知）
+
+### 17.6 Neo Research — 研究模块
+- 研究报告类型（Initiation / Flash / Strategy / ESG）
+- UBS Evidence Lab替代数据研究
+
+### 17.7 Neo Invest — 投资分析模块
+- 组合视图 / P&L归因 / 风险看板 / 情景分析
+
+### 17.8 Neo Connect — API集成层
+- REST API / FIX Protocol（4.4）/ WebSocket Streaming / SFTP对账文件
+- OAuth 2.0认证流程
+- 关键API端点列表
+- FIX接入报文示例（NewOrderSingle / ExecutionReport）
+- WebSocket实时价格流代码示例
+
+### 17.9 Neo vs Bloomberg对比
+- 各维度对比：FX交易 / 市场数据 / 结构化产品 / API / 费用
+
+### 17.10 系统集成注意事项
+- 内部系统对接场景（实时定价 / 算法下单 / 交易后对账 / 合规留存）
+- 常见集成陷阱（Token过期 / 报价过期 / FIX序列号 / Rate Limit）
+
+---
+
 ## 文档清单 / Document List
 
 | 文件名 | 主题 |
@@ -890,3 +942,4 @@ Phase 16 → UBS投资银行业务深度解析 (UBS Investment Bank Deep Dive)
 | `Phase-14-Advanced-Trading.md` | 高级交易与金融科技 |
 | `Phase-15-IB-Business-Processes.md` | 投行核心业务流程详解（DCM/IPO/M&A/交易台日常）|
 | `Phase-16-UBS-Investment-Bank.md` | UBS投资银行业务深度解析（组织架构、产品线、香港业务、CS合并）|
+| `Phase-17-UBS-Neo-Platform.md` | UBS Neo平台深度解析（模块架构、FX/固收/结构化产品流程、Neo Connect API集成）|
